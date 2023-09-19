@@ -1,0 +1,33 @@
+ALGORITHM CHECKPOINT
+VAR
+    sentence_length : INTEGER
+    word_count : INTEGER
+    vowel_count : INTEGER
+
+BEGIN
+
+    READ = input("Enter a sentence ");
+
+
+    for char in input_sentence:
+        sentence_length += 1  ;
+
+        
+        if char == ' ':
+            word_count += 1;
+
+        
+        if char.lower() in ['a', 'e', 'i', 'o', 'u']:
+            vowel_count += 1;
+
+
+    word_count += 1;
+
+
+    WRITE("Sentence Length:", sentence_length);
+    WRITE("Number of Words:", word_count);
+    WRITE("Number of Vowels:", vowel_count);
+    
+    end if
+END.
+
