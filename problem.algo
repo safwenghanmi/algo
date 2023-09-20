@@ -1,0 +1,27 @@
+ALGORITHM Problemalgo
+VAR
+set1,set2: array_name : ARRAY_OF INTEGER[10];
+i,j:INTEGER ;
+sum: INTEGER:=0;
+BEGIN
+    for i FROM 0 TO set1.length-1 DO
+    for j FROM 0 TO set2.length-1 doif (set1[i]=set2[j]) THEN
+    return true;
+    break;
+    sum:=sum+SET1[i];
+    END_IF
+    END_FOR
+    END_FOR
+END
+
+FOR I FROM 0 TO SET2.length-1 DO
+FOR J FROM 0 TO SET1.length-1 DO
+IF (set2[i]=set1[j]) THEN
+RETURN TRUE ;
+BREAK;
+sum:= sum+set2[i];
+END_IF
+END_FOR
+END_FOR
+write (sum);
+END

@@ -1,0 +1,27 @@
+Algorithm Dot_Product(v1, v2):
+    ps = 0  // Initialize the dot product to 0
+    
+    // Calculate the dot product
+    for i from 1 to length(v1) do
+        ps = ps + v1[i] * v2[i]
+    end for
+    
+    return ps
+
+Algorithm Check_Orthogonality_using_Procedure(n, vectors):
+    for i from 1 to n do
+        v1 = vectors[i] // First vector
+        v2 = vectors[i]  // Second vector
+        
+        // Calculate dot product using the Dot_Product procedure
+        dot_product_result = Dot_Product(v1, v2)
+        
+        // Check if the dot product is zero (orthogonal)
+        if dot_product_result == 0 then
+            write "Vectors", v1, "and", v2, "are orthogonal";
+        else
+            write "Vectors", v1, "and", v2, "are not orthogonal";
+        end if
+    end for
+    END
+END
