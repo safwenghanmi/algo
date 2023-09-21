@@ -1,0 +1,22 @@
+ALGORITHM InsertionSort(arr):
+    
+VAR
+    
+    var length = length(arr) // Length of the array
+    var key, j =INTEGER
+
+BEGIN
+    // Iterate through the array
+    for var i from 1 to length - 1 do
+        key = arr[i] // Element to be inserted
+        j = i - 1 // Initialize the index to the left of i
+    
+        // Shift elements of arr[0..i-1] that are greater than key
+        while j >= 0 and arr[j] > key do
+            arr[j + 1] = arr[j]
+            j = j - 1
+        end while
+    
+        arr[j + 1] = key // Place key at its correct position
+    end for
+END
