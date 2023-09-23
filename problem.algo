@@ -5,7 +5,8 @@ i,j:INTEGER ;
 sum: INTEGER:=0;
 BEGIN
     for i FROM 0 TO set1.length-1 DO
-    for j FROM 0 TO set2.length-1 doif (set1[i]=set2[j]) THEN
+    for j FROM 0 TO set2.length-1 do 
+    if (set1[i]=set2[j]) THEN
     return true;
     break;
     sum:=sum+SET1[i];

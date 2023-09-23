@@ -1,33 +1,35 @@
-ALGORITHM CHECKPOINT
 VAR
-    sentence_length : INTEGER
-    word_count : INTEGER
-    vowel_count : INTEGER
+    sentence_length : INTEGER;
+    word_count : INTEGER;
+    vowel_count : INTEGER;
+    input_sentence : STRING;  // Add this variable to store the user input.
 
 BEGIN
+    sentence_length := 0;  // Initialize the variables to zero.
+    word_count := 0;
+    vowel_count := 0;
 
-    READ = input("Enter a sentence ");
+    WRITE("Enter a sentence: ");  // Prompt the user for input.
+    READLN(input_sentence);  // Read the input sentence.
 
+    FOR char IN input_sentence DO
+        sentence_length := sentence_length + 1;
 
-    for char in input_sentence:
-        sentence_length += 1  ;
+        IF char = ' ' THEN
+            word_count := word_count + 1;
+        END_IF;
 
-        
-        if char == ' ':
-            word_count += 1;
+        IF char IN ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'] THEN
+            vowel_count := vowel_count + 1;
+        END_IF;
+    END_FOR;
 
-        
-        if char.lower() in ['a', 'e', 'i', 'o', 'u']:
-            vowel_count += 1;
+    // Increment the word count by 1 to account for the last word.
+    word_count := word_count + 1;
 
-
-    word_count += 1;
-
-
-    WRITE("Sentence Length:", sentence_length);
-    WRITE("Number of Words:", word_count);
-    WRITE("Number of Vowels:", vowel_count);
-    
-    end if
+    WRITE("Sentence Length: ", sentence_length);
+    WRITE("Number of Words: ", word_count);
+    WRITE("Number of Vowels: ", vowel_count);
 END.
+
 

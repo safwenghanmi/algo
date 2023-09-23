@@ -1,0 +1,16 @@
+Algorithm IsPalindrome(word):BOOLEAN
+BEGIN
+    // Base case: an empty word or a word containing a single character is a palindrome
+    if length(word) <= 1 then
+        return True
+    end if
+    
+    // Compare the characters at the ends of the word
+    if word[0] == word[length(word) - 1] then
+        // Recursively test the rest of the word
+        return IsPalindrome(substring(word, 1, length(word) - 2))
+    else
+        // If there's a difference, it's not a palindrome
+        return False
+    end if
+END
